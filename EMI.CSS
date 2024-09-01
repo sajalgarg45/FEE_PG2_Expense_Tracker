@@ -1,0 +1,160 @@
+/* Font style */
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Main Body */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1b1b1b;
+    margin: 25px;
+}
+
+/* Main container */
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: grey;
+}
+
+/* Input container */
+.input-field {
+    background-color: #b9b6b6;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+/* heading tag */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(7, 7, 7);
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #555;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.input-container label {
+    color: rgb(241, 174, 50);
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 80%; /* Adjust width for better alignment */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    color: white;
+}
+
+.tenure-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tenure-type input {
+    color: white;
+    accent-color: orange;
+}
+
+/* calculate box */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #e07b00; /* Darker orange */
+}
+
+/* Result container */
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 20px;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.result-box {
+    width: 160px;
+    height: 180px;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #333;
+    color: orange;
+}
+
+.pie-chart-box {
+    width: 28%;
+}
+
+.amortization-schedule {
+    margin-top: 25px;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead th {
+    background-color: orange;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+tbody td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #666;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #333;
+}

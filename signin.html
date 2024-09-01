@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="signin.css">
+    <title>signin-signup</title>
+</head>
+
+<body>
+
+
+    <div class="container">    <!-- Main Container -->
+        <div class="signin-signup"> <!-- Documentation container -->
+
+            <form action="" class="sign-in-form">   <!-- form for sign in -->
+                <h2 class="title">SIGN IN</h2>
+                
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                
+                <input type="button" value="Login" class="btn">
+                <p class="social-text">Or Sign in with Social Platform</p>
+                <div class="social-media">
+                    <a href="Dashboard.html" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="Dashboard.html" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="Dashboard.html" class="social-icon"><i class="fab fa-google"></i></a>
+                    <a href="Dashboard.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+
+            <form action="" class="sign-up-form">  <!-- form for sign up -->
+                <h2 class="title">SIGN UP</h2>
+                
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                
+                <input type="submit" value="Sign up" class="btn">
+                <p class="social-text">Or Sign in with Social Platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+
+        </div> <!-- Documentation container End -->
+
+        <div class="panels-container">  <!-- Panels container -->
+            
+            <div class="panel left-panel">  <!-- Left Panel -->
+                <div class="content">
+                    <h3>MEMBER OF WEALTHWISE</h3>
+                    <p>Track spending, save smarter, and stay in control of your finances</p>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+                </div>
+                <img src="signin.png" alt="" class="image">
+            </div>
+            
+            <div class="panel right-panel">  <!-- Right Panel -->
+                <div class="content">
+                    <h3>NEW TO WEALTHWISE</h3>
+                    <p>Manage your expenses, track budgets, and achieve financial goals. Sign up now!</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="signout.jpg" alt="" class="image">
+            </div>
+
+        </div> <!-- Panels container End -->
+
+    </div> <!-- Main Container End -->
+
+    <script>
+document.querySelector("#sign-up-btn").addEventListener("click", () => {
+    document.querySelector(".container").classList.add("sign-up-mode");
+});
+
+document.querySelector("#sign-in-btn").addEventListener("click", () => {
+    document.querySelector(".container").classList.remove("sign-up-mode");
+});
+
+document.querySelector("#sign-up-btn2").addEventListener("click", () => {
+    document.querySelector(".container").classList.add("sign-up-mode");
+});
+
+document.querySelector("#sign-in-btn2").addEventListener("click", () => {
+    document.querySelector(".container").classList.remove("sign-up-mode");
+});
+
+    </script>
+</body>
+</html>

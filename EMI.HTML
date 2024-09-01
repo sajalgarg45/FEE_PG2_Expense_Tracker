@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan EMI Calculator</title>
+    <link rel="stylesheet" href="EMI.CSS">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container"> <!-- Main container -->
+
+        <div class="input-field"> <!-- Input container -->
+        
+            <h2>EMI CALCULATOR</h2>
+        
+        <div class="input-container"> <!-- Amount fields -->
+            <label for="amount">Amount (₹)</label>
+            <input type="number" id="amount">
+        </div>
+        
+        <div class="input-container"> <!-- Interest Rate fields -->
+            <label for="interestRate">Interest Rate (%)</label>
+            <input type="number" id="interestRate">
+        </div>
+        
+        <div class="input-container"> <!-- Tenure fields -->
+            <label for="tenure">Tenure</label>
+            <input type="number" id="tenure">
+            <label for="tenureType" class="tenure-type">
+                <input type="radio" id="tenureTypeYears" name="tenureType" value="years"> Years
+                <input type="radio" id="tenureTypeMonths" name="tenureType" value="months" checked> Months
+            </label>
+        </div>
+        <button onclick="calculateEMI()">Calculate</button> <!-- Calculate button -->
+        
+        </div>
+
+        <div class="result-container"> <!-- Result section -->
+            
+            <div class="result-box"> <!-- Monthly Payment box -->
+                <h3>Monthly Payment</h3>
+                <p id="monthlyPayment">₹ 0</p>
+            </div>
+            
+            <div class="result-box"> <!-- Total Interest Payable box -->
+                <h3>Total Interest Payable</h3>
+                <p id="totalInterest">₹ 0</p>
+            </div>
+            
+            <div class="result-box"> <!-- Total Payment box -->
+                <h3>Total Payment (Principal + Interest)</h3>
+                <p id="totalPayment">₹ 0</p>
+            </div>
+            
+            <div class="result-box pie-chart-box"> <!-- Payment Pie Chart box -->
+                <canvas id="paymentPieChart"></canvas>
+            </div>
+        
+        </div>
+
+        <div class="amortization-schedule"> <!-- Amortization Schedule section -->
+            <h3>Amortization Schedule</h3>
+            
+            <table>
+                
+                <thead> <!-- Default Table header -->
+                    <tr>
+                        <th>Month</th>
+                        <th>Principal (A)</th>
+                        <th>Interest (B)</th>
+                        <th>Total (A + B)</th>
+                        <th>Balance</th>
+                        <th>Loan Paid Till Date</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="amortizationTable">
+                    <!-- EMI rows will be inserted here -->
+                </tbody>
+            
+            </table>
+        </div>
+    
+    </div> <!-- End of Main container -->
+    
+<script src="EMI.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <link rel="stylesheet" href="Stocks.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="filters">  <!-- Filter Checkbox -->
+            <h2>FILTERS</h2>
+            <label><input type="checkbox"> Agricultural</label>
+            <label><input type="checkbox"> Apparel & Accessories</label>
+            <label><input type="checkbox"> Automobile & Ancillaries</label>
+            <label><input type="checkbox"> Banking</label>
+            <label><input type="checkbox"> Consumer Durables</label>
+            <label><input type="checkbox"> Derived Materials</label>
+            <label><input type="checkbox"> Energy</label>
+            <label><input type="checkbox"> Financial</label>
+        </div>
+
+        <div class="stocks-container">
+            
+            <div class="stocks-header">
+                <h2>ALL STOCKS</h2>
+                <input type="text" id="search" placeholder="Search Stocks..." onkeyup="filterStocks()">
+            </div>
+
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>GRAPH</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>CHANGE</th>
+                        <th>MARKET CAP</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="stocks">
+                    
+                    <tr class="stock-item">
+                        <td><img src="Graph_1.jpg" class="stock-graph" alt="Graph for Zydus Wellness"></td>
+                        <td class="stock-name">Zydus Wellness</td>
+                        <td class="stock-price">₹2,295.25</td>
+                        <td class="stock-change positive">+1.78%</td>
+                        <td class="stock-mcap">₹10,387</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_2.jpg" class="stock-graph" alt="Graph for Zydus"></td>
+                        <td class="stock-name">Zydus</td>
+                        <td class="stock-price">₹1,127.90</td>
+                        <td class="stock-change positive">+0.37%</td>
+                        <td class="stock-mcap">₹94,082</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_3.jpg" class="stock-graph" alt="Graph for Zuari Industries"></td>
+                        <td class="stock-name">Zuari Industries</td>
+                        <td class="stock-price">₹393.75</td>
+                        <td class="stock-change negative">-5.61%</td>
+                        <td class="stock-mcap">₹1,085</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_4.jpg" class="stock-graph" alt="Graph for Zuari Agro Chem"></td>
+                        <td class="stock-name">Zuari Agro Chem</td>
+                        <td class="stock-price">₹204.74</td>
+                        <td class="stock-change negative">-0.54%</td>
+                        <td class="stock-mcap">₹823</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_5.jpg" class="stock-graph" alt="Graph for Zota Health Care"></td>
+                        <td class="stock-name">Zota Health Care</td>
+                        <td class="stock-price">₹661.30</td>
+                        <td class="stock-change positive">+0.98%</td>
+                        <td class="stock-mcap">₹1,271</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_6.jpg" class="stock-graph" alt="Graph for Zomato"></td>
+                        <td class="stock-name">Zomato</td>
+                        <td class="stock-price">₹250.53</td>
+                        <td class="stock-change negative">-1.61%</td>
+                        <td class="stock-mcap">₹1,65,900</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_7.jpg" class="stock-graph" alt="Graph for Wipro"></td>
+                        <td class="stock-name">Wipro</td>
+                        <td class="stock-price">₹538.40</td>
+                        <td class="stock-change negative">-0.06%</td>
+                        <td class="stock-mcap">₹2,39,966</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_8.jpg" class="stock-graph" alt="Graph for UPL"></td>
+                        <td class="stock-name">UPL</td>
+                        <td class="stock-price">₹598.35</td>
+                        <td class="stock-change positive">+3.56%</td>
+                        <td class="stock-mcap">₹36,761</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_9.jpg" class="stock-graph" alt="Graph for Titan"></td>
+                        <td class="stock-name">Titan</td>
+                        <td class="stock-price">₹3565.15</td>
+                        <td class="stock-change positive">+0.90%</td>
+                        <td class="stock-mcap">₹3,19,740</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_10.jpg" class="stock-graph" alt="Graph for SBI"></td>
+                        <td class="stock-name">SBI</td>
+                        <td class="stock-price">₹815.60</td>
+                        <td class="stock-change positive">+0.12%</td>
+                        <td class="stock-mcap">₹6,75,459</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_11.jpg" class="stock-graph" alt="Graph for NTPC"></td>
+                        <td class="stock-name">NTPC</td>
+                        <td class="stock-price">₹416.20</td>
+                        <td class="stock-change positive">+1.54%</td>
+                        <td class="stock-mcap">₹3,12,475</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_12.jpg" class="stock-graph" alt="Graph for Reliance Industries"></td>
+                        <td class="stock-name">Reliance Industries</td>
+                        <td class="stock-price">₹3019.25</td>
+                        <td class="stock-change negative">-0.74%</td>
+                        <td class="stock-mcap">₹19,84,309</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_13.jpg" class="stock-graph" alt="Graph for ITC"></td>
+                        <td class="stock-name">ITC</td>
+                        <td class="stock-price">₹501.90</td>
+                        <td class="stock-change negative">-0.63%</td>
+                        <td class="stock-mcap">₹5,31,724</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_14.jpg" class="stock-graph" alt="Graph for Infosys"></td>
+                        <td class="stock-name">Infosys</td>
+                        <td class="stock-price">₹1943.70</td>
+                        <td class="stock-change positive">+0.54%</td>
+                        <td class="stock-mcap">₹1,65,900</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_15.jpg" class="stock-graph" alt="Graph for L&T"></td>
+                        <td class="stock-name">L&T</td>
+                        <td class="stock-price">₹3704.83</td>
+                        <td class="stock-change positive">+0.58%</td>
+                        <td class="stock-mcap">₹4,94,997</td>
+                    </tr>
+                    <tr class="stock-item">
+                        <td><img src="Graph_16.jpg" class="stock-graph" alt="Graph for HDFC Bank"></td>
+                        <td class="stock-name">HDFC Bank</td>
+                        <td class="stock-price">₹1455.45</td>
+                        <td class="stock-change positive">+1.71%</td>
+                        <td class="stock-mcap">₹1,89,980</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        
+        </div> <!-- Stocks Container End-->
+    </div> <!-- Container End-->
+
+
+    <script>
+        function filterStocks() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const stocks = document.getElementsByClassName('stock-item');
+            for (let i = 0; i < stocks.length; i++) {
+                const stockName = stocks[i].getElementsByClassName('stock-name')[0].innerText.toLowerCase();
+                if (stockName.includes(searchInput)) {
+                    stocks[i].style.display = '';
+                } else {
+                    stocks[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: rgb(74,75,75);
+    background: linear-gradient(90deg, rgba(74,75,75,1) 0%, rgba(59,73,62,1) 35%, rgba(36,32,32,1) 100%);
+}
+
+header {
+    background: rgb(33,80,42);
+    background: linear-gradient(90deg, rgba(33,80,42,1) 0%, rgba(56,110,68,1) 35%, rgba(23,62,27,1) 100%);
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 0.8rem 0;
+    border-radius: 30px;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.fund-grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ede2e2;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.fund-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #1f1e1e;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+.fund-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fund-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.fund-details {
+    margin-bottom: 10px;
+}
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.fund-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.fund-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: rgb(33,80,42);
+    background: linear-gradient(90deg, rgba(33,80,42,1) 0%, rgba(56,110,68,1) 35%, rgba(23,62,27,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fund-item:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
